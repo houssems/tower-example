@@ -1,13 +1,10 @@
 ---
 - name: Hello World!
   hosts: all
-  roles:
-  - yatesr.timezone
-
   vars:
    timezone: America/New_York
   tasks:
   - debug:
-      var=AZURE_AD_USER
+      var=subscription_id
   - name: Hello World!
     shell: echo "Hi! Tower is working."
