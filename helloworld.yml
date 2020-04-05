@@ -3,6 +3,8 @@
   hosts: all
   vars:
    timezone: America/New_York
+  roles:
+    - huxoll.azure-cli
   tasks:
   - debug:
       var=subscription_id
@@ -35,3 +37,5 @@
     debug: 
       msg: "{{ msg.split('\n') }}"       
     tags: debug_info
+  - name: az login
+    shell: az login -u {{AZURE_AD_USER}} -p {{AZURE_PASSWORD}}
