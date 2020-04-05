@@ -38,4 +38,4 @@
       msg: "{{ msg.split('\n') }}"       
     tags: debug_info
   - name: az login
-    shell: az login -u {{AZURE_AD_USER}} -p {{AZURE_PASSWORD}}
+    shell: az login -u {{ansible_env.AZURE_AD_USER}} -p {{ansible_env.AZURE_PASSWORD}}
