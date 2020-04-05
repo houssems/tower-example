@@ -7,6 +7,7 @@
   vars:
    timezone: America/New_York
   tasks:
- 
+  - debug:
+    var=AZURE_AD_USER
   - name: Hello World!
     shell: echo "Hi! Tower is working."
